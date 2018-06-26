@@ -1,0 +1,11 @@
+[package]
+name = "libpostal-sys"
+version = "0.1.0"
+authors = ["Evgeny Duzhakov <diaevd@gmail.com>"]
+description = "Native bindings to the libpostal library"
+
+[lib]
+name = "libpostal_sys"
+
+[dependencies]
+libc = "0.2"
