@@ -4,7 +4,7 @@ version = "0.1.1"
 authors = ["Evgeny Duzhakov <diaevd@gmail.com>"]
 description = "Native bindings to the libpostal library"
 edition = "2018"
-links = "postal"
+#links = "postal"
 
 [lib]
 name = "libpostal_sys"
