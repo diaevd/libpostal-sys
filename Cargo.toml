@@ -1,12 +1,13 @@
 [package]
 name = "libpostal-sys"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Evgeny Duzhakov <diaevd@gmail.com>"]
 description = "Native bindings to the libpostal library"
-edition = "2015"                        
+edition = "2018"
+links = "postal"
 
 [lib]
 name = "libpostal_sys"
 
 [dependencies]
-libc = "0.2.47"
+libc = "0.2.50"
