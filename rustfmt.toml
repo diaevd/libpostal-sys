@@ -1,0 +1,21 @@
+reorder_imports = false
+reorder_modules = false
+tab_spaces = 4
+hard_tabs = false
+# try! -> ?
+use_try_shorthand = true
+### Ustable features
+unstable_features = true
+reorder_impl_items = true
+indent_style = "Block"
+trailing_comma = "Vertical"
+match_block_trailing_comma = false
+blank_lines_upper_bound = 2
+space_after_colon = true
+struct_field_align_threshold = 0 # выравнивание варов
+enum_discrim_align_threshold = 0 # выравнивание варов
+fn_args_density = "Compressed" # "Compressed", <"Tall">, "Vertical"
+format_strings = true
+force_multiline_blocks = true # Force multiline closure and match arm bodies to be wrapped in a block
+normalize_comments = true # single /* */ -> //
+overflow_delimited_expr = true # &[, vec![ -> same line (ups)
