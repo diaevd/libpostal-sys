@@ -24,7 +24,7 @@ use std::os::raw::c_char;
 // #define LIBPOSTAL_ADDRESS_ALL ((1 << 16) - 1)
 
 pub const LIBPOSTAL_ADDRESS_NONE: u16 = 0;
-pub const LIBPOSTAL_ADDRESS_ANY: u16 = (1 << 0);
+pub const LIBPOSTAL_ADDRESS_ANY: u16 = 1; // (1 << 0);
 pub const LIBPOSTAL_ADDRESS_NAME: u16 = (1 << 1);
 pub const LIBPOSTAL_ADDRESS_HOUSE_NUMBER: u16 = (1 << 2);
 pub const LIBPOSTAL_ADDRESS_STREET: u16 = (1 << 3);
@@ -82,8 +82,8 @@ pub struct libpostal_address_parser_response {
     pub labels: *const *const c_char,
 }
 
-// #[link(name = "postal", kind = "dylib")]
-#[link(name = "postal", kind = "static")]
+#[cfg_attr(feature = "static", link(name = "postal", kind = "static"))]
+#[cfg_attr(not(feature = "static"), link(name = "postal", kind = "dylib"))]
 extern "C" {
     // engine setup / teardown
     pub fn libpostal_setup() -> bool;
